@@ -22,15 +22,15 @@ export default function DashboardLayout({
             width={32}
             height={32}
           />
-          <span className="hidden lg:block">
-            SchoolLama
+          <span className="hidden lg:block font-bold">
+            SchoolDashboard
           </span>
         </Link>
         <Menu/>
       </div>
 
       {/* RIGHT */}
-      <div className="w-[86%] md:w-[92%] lg:w-[84%] xl:w-[86%] bg-[#F7F8FA] overflow-scroll">
+      <div className="w-[86%] md:w-[92%] lg:w-[84%] xl:w-[86%] bg-[#F7F8FA] overflow-scroll flex flex-col">
         <Navbar/>
         {children}
 
