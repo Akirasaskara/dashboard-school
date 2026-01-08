@@ -140,7 +140,7 @@ export const studentsData = [
   },
   {
     id: 2,
-    studentId: "1234567890",
+    studentId: "1234567891",
     name: "Jane Doe",
     email: "jane@doe.com",
     photo:
@@ -152,7 +152,7 @@ export const studentsData = [
   },
   {
     id: 3,
-    studentId: "1234567890",
+    studentId: "1234567892",
     name: "Mike Geller",
     email: "mike@geller.com",
     photo:
@@ -164,7 +164,7 @@ export const studentsData = [
   },
   {
     id: 4,
-    studentId: "1234567890",
+    studentId: "1234567893",
     name: "Jay French",
     email: "jay@gmail.com",
     photo:
@@ -176,7 +176,7 @@ export const studentsData = [
   },
   {
     id: 5,
-    studentId: "1234567890",
+    studentId: "1234567894",
     name: "Jane Smith",
     email: "jane@gmail.com",
     photo:
@@ -188,7 +188,7 @@ export const studentsData = [
   },
   {
     id: 6,
-    studentId: "1234567890",
+    studentId: "1234567895",
     name: "Anna Santiago",
     email: "anna@gmail.com",
     photo:
@@ -200,7 +200,7 @@ export const studentsData = [
   },
   {
     id: 7,
-    studentId: "1234567890",
+    studentId: "1234567896",
     name: "Allen Black",
     email: "allen@black.com",
     photo:
@@ -212,7 +212,7 @@ export const studentsData = [
   },
   {
     id: 8,
-    studentId: "1234567890",
+    studentId: "1234567897",
     name: "Ophelia Castro",
     email: "ophelia@castro.com",
     photo:
@@ -224,7 +224,7 @@ export const studentsData = [
   },
   {
     id: 9,
-    studentId: "1234567890",
+    studentId: "1234567898",
     name: "Derek Briggs",
     email: "derek@briggs.com",
     photo:
@@ -236,12 +236,12 @@ export const studentsData = [
   },
   {
     id: 10,
-    studentId: "1234567890",
+    studentId: "1234567899",
     name: "John Glover",
     email: "john@glover.com",
     photo:
       "https://images.pexels.com/photos/1043474/pexels-photo-1043474.jpeg?auto=compress&cs=tinysrgb&w=1200",
-    phone: "1234567890",
+    phone: "1234567900",
     grade: 5,
     class: "5A",
     address: "123 Main St, Anytown, USA",
@@ -915,7 +915,6 @@ export const announcementsData = [
   },
 ];
 
-
 // YOU SHOULD CHANGE THE DATES OF THE EVENTS TO THE CURRENT DATE TO SEE THE EVENTS ON THE CALENDAR
 export const calendarEvents = [
   // JANUARY 2026
@@ -1489,4 +1488,4 @@ export const calendarEvents = [
     start: new Date(2026, 11, 14, 0, 0),
     end: new Date(2026, 11, 18, 0, 0),
   },
-];  
+];
