@@ -2,27 +2,79 @@
 @tailwind components;
 @tailwind utilities;
 
+@layer base {
+  :root {
+    --background: 210 40% 98%;
+    --foreground: 222 47% 11%;
+    --card: 0 0% 100%;
+    --card-foreground: 222 47% 11%;
+    --primary: 221 83% 53%;
+    --primary-foreground: 210 40% 98%;
+    --secondary: 214 32% 91%;
+    --secondary-foreground: 222 47% 11%;
+    --muted: 210 40% 96%;
+    --muted-foreground: 215 16% 47%;
+    --accent: 214 95% 93%;
+    --accent-foreground: 221 83% 35%;
+    --destructive: 0 72% 51%;
+    --destructive-foreground: 210 40% 98%;
+    --border: 214 32% 91%;
+    --input: 214 32% 88%;
+    --ring: 221 83% 53%;
+    --radius: 1rem;
+  }
+
+  * {
+    @apply border-border;
+  }
+
+  html {
+    scroll-behavior: smooth;
+  }
+
+  body {
+    @apply bg-background text-foreground antialiased;
+  }
+
+  ::selection {
+    @apply bg-primary/20 text-foreground;
+  }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  *,
+  *::before,
+  *::after {
+    scroll-behavior: auto !important;
+    animation-duration: 0.01ms !important;
+    animation-iteration-count: 1 !important;
+    transition-duration: 0.01ms !important;
+  }
+}
+
 .react-calendar {
   width: 100% !important;
   border: none !important;
-  font-family: "Inter", sans-serif;
+  font-family: inherit;
 }
+
 .react-calendar__navigation__label__labelText {
   font-weight: 600;
 }
 
 .react-calendar__tile--now {
-  background-color: #c3ebfa !important;
-  color: black !important;
+  background-color: hsl(var(--accent)) !important;
+  color: hsl(var(--accent-foreground)) !important;
 }
 
-.rbc-btn-group:first-child {
+.rbc-btn-group:first-child,
+.rbc-time-header {
   display: none !important;
 }
 
 .rbc-toolbar-label {
+  padding: 0 20px !important;
   text-align: right !important;
-  padding: 0px 20px !important;
 }
 
 .rbc-btn-group:last-child {
@@ -30,78 +82,48 @@
 }
 
 .rbc-btn-group:last-child button {
+  margin-left: 2px !important;
   border: none !important;
-  background-color: #f1f0ff !important;
-  margin-left: 2px !important ;
+  background-color: hsl(var(--muted)) !important;
 }
 
 .rbc-toolbar button.rbc-active {
-  background-color: #dbdafe !important;
+  background-color: hsl(var(--accent)) !important;
   box-shadow: none !important;
 }
 
 .rbc-time-view {
-  border-color: #eee !important;
-}
-
-.rbc-time-header {
-  display: none !important;
+  border-color: hsl(var(--border)) !important;
 }
 
 .rbc-time-content {
   border: none !important;
 }
 
-.rbc-time-gutter .rbc-time-column{
+.rbc-time-gutter .rbc-time-column,
+.rbc-day-slot {
   font-size: 12px !important;
 }
 
-.rbc-time-gutter .rbc-time-column .rbc-timeslot-group{
-  padding: 0px 20px !important;
+.rbc-time-gutter .rbc-time-column .rbc-timeslot-group {
+  padding: 0 20px !important;
 }
 
-.rbc-timeslot-group{
-  background-color: #f7fdff !important;
+.rbc-timeslot-group {
+  background-color: hsl(var(--background)) !important;
 }
 
-.rbc-day-slot{
-  font-size: 14px !important;
-}
-
-.rbc-event{
+.rbc-event {
+  width: calc(100% - 10px) !important;
+  margin: 5px !important;
   border: none !important;
-  color: black !important;
-  padding: 10px !important;
-  margin: 10px !important;
-  width: 99% !important;
+  border-radius: 10px !important;
+  padding: 8px !important;
+  background-color: hsl(var(--accent)) !important;
+  color: hsl(var(--foreground)) !important;
 }
 
-.rbc-event:nth-child(1){
-  background-color:  #e2f8ff !important;
-}
-.rbc-event:nth-child(2){
-  background-color:  #d9f7e8 !important;
-}
-.rbc-event:nth-child(3){
-  background-color:  #fff2e2 !important;
-}
-.rbc-event:nth-child(4){
-  background-color:  #f0e6ff !important;
-}
-.rbc-event:nth-child(5){
-  background-color:  #ffe6e6 !important;
-}
-.rbc-event:nth-child(6){
-  background-color:  #fff9e6 !important;
-}
-.rbc-event:nth-child(7){
-  background-color:  #d9f7e8 !important;
-}
-.rbc-event:nth-child(8){
-  background-color:  #e2f8ff !important;
-}
-
-.rbc-event-label{
-  color:gray !important;
+.rbc-event-label {
   margin-bottom: 5px !important;
+  color: hsl(var(--muted-foreground)) !important;
 }
