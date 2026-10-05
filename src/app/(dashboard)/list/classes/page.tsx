@@ -95,7 +95,7 @@ const ClassListPage = () => {
         </div>
       </div>
       {/* LIST */}
-      <Table coloumns={columns} renderRow={renderRow} data={classesData} />
+      <Table columns={columns} renderRow={renderRow} data={classesData} />
       {/* PAGINATION*/}
       <Pagination />
     </div>

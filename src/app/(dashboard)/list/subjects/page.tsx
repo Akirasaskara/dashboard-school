@@ -80,7 +80,7 @@ const SubjectListPage = () => {
         </div>
       </div>
       {/* LIST */}
-      <Table coloumns={coloumns} renderRow={renderRow} data={subjectsData} />
+      <Table columns={coloumns} renderRow={renderRow} data={subjectsData} />
       {/* PAGINATION*/}
       <Pagination />
     </div>

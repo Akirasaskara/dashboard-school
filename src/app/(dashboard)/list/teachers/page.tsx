@@ -7,7 +7,7 @@ import Link from "next/link";
 
 type Teacher = {
   id: number;
-  teacherid: string;
+  teacherId: string;
   name: string;
   email?: string;
   photo: string;
@@ -24,7 +24,7 @@ const coloumns = [
   },
   {
     header: "Teacher ID",
-    accessor: "teacherid",
+    accessor: "teacherId",
     className: "hidden md:table-cell",
   },
   {
@@ -72,7 +72,7 @@ const TeacherListPage = () => {
           <p className="text-xs text-gray-500">{item?.email}</p>
         </div>
       </td>
-      <td className="hidden md:table-cell">{item.teacherid}</td>
+      <td className="hidden md:table-cell">{item.teacherId}</td>
       <td className="hidden md:table-cell">{item.subjects.join(",")}</td>
       <td className="hidden md:table-cell">{item.classes.join(",")}</td>
       <td className="hidden md:table-cell">{item.phone}</td>
@@ -118,7 +118,7 @@ const TeacherListPage = () => {
         </div>
       </div>
       {/* LIST */}
-      <Table coloumns={coloumns} renderRow={renderRow} data={teachersData} />
+      <Table columns={coloumns} renderRow={renderRow} data={teachersData} />
       {/* PAGINATION*/}
       <Pagination />
     </div>

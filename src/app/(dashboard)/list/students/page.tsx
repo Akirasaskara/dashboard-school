@@ -112,7 +112,7 @@ const StudentListPage = () => {
         </div>
       </div>
       {/* LIST */}
-      <Table coloumns={coloumns} renderRow={renderRow} data={studentsData} />
+      <Table columns={coloumns} renderRow={renderRow} data={studentsData} />
       {/* PAGINATION*/}
       <Pagination />
     </div>

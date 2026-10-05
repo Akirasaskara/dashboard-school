@@ -11,7 +11,6 @@ type Parent = {
   email?: string;
   students: string[];
   phone: string;
-  class: string;
   address: string;
 };
 
@@ -97,7 +96,7 @@ const ParentListPage = () => {
         </div>
       </div>
       {/* LIST */}
-      <Table coloumns={coloumns} renderRow={renderRow} data={parentsData} />
+      <Table columns={coloumns} renderRow={renderRow} data={parentsData} />
       {/* PAGINATION*/}
       <Pagination />
     </div>
