@@ -86,7 +86,7 @@ export function AppSidebar({
     <>
       {mobileOpen ? (
         <button
-          aria-label="Close navigation"
+          aria-label="Close navigation backdrop"
           className="fixed inset-0 z-40 bg-slate-950/35 backdrop-blur-sm lg:hidden"
           onClick={() => onMobileOpenChange(false)}
         />
